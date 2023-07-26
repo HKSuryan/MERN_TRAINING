@@ -1,0 +1,32 @@
+function time(){
+    let date = new Date();
+    var days = {1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",0:"Sunday"};
+    var day = days[date.getDay()];
+    console.log(`Today is :${day}`);
+    console.log(`Current Time is : ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} `)
+}
+
+function time1(){
+    let date = new Date().toLocaleDateString('en-GB');;
+    console.log(date);
+
+}
+function add1(...arguments){
+  var sum = 0;
+  for(let i = 0;i<arguments.length;i++){
+    if(typeof(arguments[i]) == 'number'&&isNaN(arguments[i]) == false && typeof(undefined) == typeof(arguments[i])){
+    sum += arguments[i];
+
+    }
+    else if(arguments[i] == parseInt(arguments[i])){
+      sum += parseInt(arguments[i]);
+    }
+    else if(arguments[i] instanceof Array){
+      for(let j = 0;j<arguments[i].length;j++){
+              sum += add1(arguments[i][j]);
+      }
+
+    }
+  }
+  return sum;
+}
