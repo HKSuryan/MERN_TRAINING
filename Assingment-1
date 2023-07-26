@@ -1,0 +1,37 @@
+function armstrong(num){
+  var s = num+"";
+  var raise = s.length;
+  var ans = 0;
+  for(let i =0 ;i<s.length;i++){
+    ans += parseInt(s.charAt(i))**raise;
+  }
+  return num == ans;
+}
+
+function prime(num){
+  for(let i =2 ; i<num;i++){
+    if(num%i == 0){
+      return false;
+    }
+}
+  return true;
+}
+function add1(...arguments){
+  var sum = 0;
+  for(let i = 0;i<arguments.length;i++){
+    if(typeof(arguments[i]) == 'number'&&isNaN(arguments[i]) == false && typeof(undefined) == typeof(arguments[i])){
+    sum += arguments[i];
+
+    }
+    else if(arguments[i] == parseInt(arguments[i])){
+      sum += parseInt(arguments[i]);
+    }
+    else if(arguments[i] instanceof Array){
+      for(let j = 0;j<arguments[i].length;j++){
+              sum += add1(arguments[i][j]);
+      }
+
+    }
+  }
+  return sum;
+}
