@@ -1,0 +1,37 @@
+Normal Function
+function ap(){
+    let length = parseInt(prompt("Enter length :"));
+    let breadth  = parseInt(prompt("Enter Breadth :"));
+    let per = 2*(length+breadth);
+    let area = length*breadth;
+    console.log(`The area is ${area}`);
+    console.log(`The perimeter is ${per}`);
+}
+Annonymous Function
+function ap(){
+    let length = parseInt(prompt("Enter length :"));
+    let breadth  = parseInt(prompt("Enter Breadth :"));
+    let per = function(){return 2*(length+breadth);};
+    let area = function(){return length*breadth;};
+    return {area,per};
+
+}
+Name Annonymous
+function ap(){
+    let length = parseInt(prompt("Enter length :"));
+    let breadth  = parseInt(prompt("Enter Breadth :"));
+    let per = function per(){return 2*(length+breadth);};
+    let area = function area(){return length*breadth;};
+    return {area,per};
+
+}
+
+Arrow Function
+function ap(){
+    let length = parseInt(prompt("Enter length :"));
+    let breadth  = parseInt(prompt("Enter Breadth :"));
+    let per = ()=>{return 2*(length+breadth);};
+    let area =()=>{return length*breadth;};
+    return {area,per};
+
+}
