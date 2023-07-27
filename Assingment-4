@@ -1,0 +1,29 @@
+sal.reduce((acc,curr)=> {
+    if(curr >10000){
+        console.log(curr,acc,initial);
+        acc = acc +curr;
+
+     }
+    return acc ;
+});
+
+
+const helper=(a,b)=>Math.max(a,b);
+sal.reduce(helper,0);
+
+sal.reduce((acc,curr)=> {
+    if(curr >10000){
+        console.log(curr,acc,initial);
+        acc += 1;
+
+     }
+    return acc ;
+},0);
+
+ar.sort((a,b)=>a.name.localeCompare(b.name));
+ar.sort((a,b)=>a.sal-b.sal);
+
+function myFunction(arr) {
+  return arr.sal+0.1*arr.sal;
+}
+var aa = ar.map(myFunction);
